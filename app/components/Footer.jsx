@@ -1,4 +1,4 @@
-
+import Image from 'next/image';
 import { Link } from 'lucide-react';
 import React from 'react';
 
@@ -6,9 +6,11 @@ const Footer = () => {
     return (
         <footer className="bg-gray-900 text-white p-8 mt-10">
             <div className="text-center">
-                <h2 className="text-3xl font-bold text-yellow-400">
-                    Book Vibe
-                </h2>
+                
+                  <div className="flex justify-center items-center gap-2">
+                <Image src="/logo.png" alt="Logo" width={45} height={37} />
+                <h2 className="text-3xl font-bold">FITLOG</h2>
+            </div>
 
                 <p className="mt-3 text-gray-300">
                     Find your next favorite story.

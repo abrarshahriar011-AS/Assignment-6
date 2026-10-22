@@ -1,7 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Card = ({ item }) => {
   return (
+      <Link href={`/workouts/${item.id}`} className="block">
     <div className="w-full overflow-hidden rounded-xl bg-gray-900 p-4 text-white">
       <Image
         src={item.image}
@@ -31,6 +33,7 @@ const Card = ({ item }) => {
         <span>★ {item.rating}</span>
       </div>
     </div>
+    </Link>
   );
 };
 
