@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import Image from 'next/image';
+import NavLink from './Navlinks';
 
 const Navbar = () => {
   return (
@@ -28,8 +29,8 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <Link href ='/' className="btn"><button>Home</button></Link>
-        <Link href ='/' className="btn"><button>Home</button></Link>
+        <NavLink href ='/' className="btn"><button>Home</button></NavLink>
+        <NavLink href ='/' className="btn"><button>Home</button></NavLink>
       </div>
     </div>
   );
