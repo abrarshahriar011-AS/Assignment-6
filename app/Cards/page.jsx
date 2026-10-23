@@ -1,7 +1,8 @@
+
 import { Suspense } from "react";
 import Card from "../components/Card";
 
-async function WorkoutCards() {
+const WorkoutCards = async () => {
     const res = await fetch("https://api.abcz.workers.dev/api/fitlog");
 
     if (!res.ok) {
@@ -17,9 +18,9 @@ async function WorkoutCards() {
             ))}
         </div>
     );
-}
+};
 
-export default function Page() {
+const Page = () => {
     return (
         <main>
             <Suspense fallback={<p>Loading workouts...</p>}>
@@ -27,4 +28,6 @@ export default function Page() {
             </Suspense>
         </main>
     );
-}
+};
+
+export default Page;

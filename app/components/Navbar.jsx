@@ -14,22 +14,26 @@ const Navbar = () => {
           <ul
             tabIndex={-1}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-          <NavLink href="/workouts">
+          <Link href="../Cards">
             <button className="btn btn-soft btn-success">Workouts</button>
-          </NavLink>
+          </Link>
           <NavLink href="/my-plan">
             <button className="btn btn-neutral">My Plan</button>
           </NavLink>
         </ul>
       </div>
-
+<Link href={'/'} className='flex justify-center'>
 <Image src="/logo.png" alt="/Logo" width={45} height={37} />      
- <h2>FITLOG</h2>
+ <h2 className='mt-2 text-2xl font-extrabold mx-2'>FITLOG</h2></Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <button className="btn btn-soft btn-success">Workouts</button>
-          <button className="btn btn-neutral">My Plan</button>
+          <Link href="../Cards">
+            <button className="btn btn-soft btn-success">Workouts</button>
+          </Link>
+          <NavLink href="/my-plan">
+            <button className="btn btn-neutral">My Plan</button>
+          </NavLink>
         </ul>
       </div>
       <div className="navbar-end">
