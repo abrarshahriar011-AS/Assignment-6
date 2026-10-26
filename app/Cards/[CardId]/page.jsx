@@ -1,10 +1,8 @@
-
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-
+import WorkoutButtons from "../../context/WorkoutButtons";
 export const instant = false;
-
 export const generateStaticParams = async () => {
   const res = await fetch("https://api.abcz.workers.dev/api/fitlog");
 
@@ -118,14 +116,11 @@ const CardDetails = async ({ params }) => {
               ))}
             </ol>
 
-            <button className="mt-6 rounded-lg bg-lime-400 px-5 py-3 font-bold text-black hover:bg-lime-300">
-              Start Workout
-            </button>
+            <WorkoutButtons item={item} />
           </div>
         </div>
       </div>
     </main>
   );
 };
-
 export default CardDetails;

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import Image from 'next/image';
-import NavLink from './Navlinks';
+import NavLinks from './Navlinks';
 
 const Navbar = () => {
   return (
@@ -14,12 +14,12 @@ const Navbar = () => {
           <ul
             tabIndex={-1}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-          <Link href="../Cards">
+          <NavLinks href="../Cards">
             <button className="btn btn-soft btn-success">Workouts</button>
-          </Link>
-          <NavLink href="/my-plan">
+          </NavLinks>
+          <NavLinks href="../MyPlan">
             <button className="btn btn-neutral">My Plan</button>
-          </NavLink>
+          </NavLinks>
         </ul>
       </div>
 <Link href={'/'} className='flex justify-center'>
@@ -27,18 +27,21 @@ const Navbar = () => {
  <h2 className='mt-2 text-2xl font-extrabold mx-2'>FITLOG</h2></Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <Link href="../Cards">
-            <button className="btn btn-soft btn-success">Workouts</button>
-          </Link>
-          <NavLink href="/my-plan">
-            <button className="btn btn-neutral">My Plan</button>
-          </NavLink>
-        </ul>
+      
+<ul className="menu menu-horizontal gap-2 px-1">
+  <li>
+    <NavLinks href="/Cards">Workouts</NavLinks>
+  </li>
+
+  <li>
+    <NavLinks href="/MyPlan">My Plan</NavLinks>
+  </li>
+</ul>
+
       </div>
       <div className="navbar-end">
-        <Link href ='/' className="btn"><button>Plan</button></Link>
-        <Link href ='/' className="btn"><button>Saved</button></Link>
+        <NavLinks href ='/' className="btn"><button>Plan</button></NavLinks>
+        <NavLinks href ='/' className="btn"><button>Saved</button></NavLinks>
       </div>
     </div>
   );
