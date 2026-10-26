@@ -40,7 +40,7 @@ const Navbar = () => {
 
       </div>
       <div className="navbar-end">
-        <NavLinks href ='/' className="btn"><button>Plan</button></NavLinks>
+        <NavLinks href ='../MyPlan' className="btn "><button >Plan</button></NavLinks>
         <NavLinks href ='/' className="btn"><button>Saved</button></NavLinks>
       </div>
     </div>
